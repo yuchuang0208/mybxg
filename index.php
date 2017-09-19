@@ -1,19 +1,9 @@
-<?php 
-  // 后端路由（根据URL的不同响应不同的页面）
-
+<?php
   // header('content-type:text/html; charset=utf8');
-  // include('./header.html');
-  // echo '<div>主页内容</div>';
-  // include('./footer.html');
-  // include 在当前PHP页面内部嵌入一个子页面
-
-  // 必须能够通过URL区分出用户想访问哪个页面
-
   // 默认目录名称
   $dir = 'main';
   // 默认文件名称
   $filename = 'index';
-
   // 处理URL的路径
   if(array_key_exists('PATH_INFO', $_SERVER)){
     // PATH_INFO属性存在
