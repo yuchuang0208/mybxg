@@ -44,7 +44,7 @@ define(["jquery","template","cookie"], function ($,template) {
 	$(".aside .profile").html(html);
 
 
-	
+
 
 
 });
