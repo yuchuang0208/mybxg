@@ -24,7 +24,7 @@ define(["jquery","template","cookie"], function ($,template) {
 
 	//验证用户是否登录
 	var flag = $.cookie("PHPSESSID");
-	console.log(flag);
+	//console.log(flag);
 	//如果cookie不存在则跳转到登录页
 	if(!flag && location.pathname != "/main/login") {
 		location.href = "/main/login";
