@@ -15,6 +15,10 @@ define(["jquery"], function ($) {
                 });
             }
             return result;
+        },
+        setMenu : function (path) {
+            //设置菜单栏高亮显示
+            $(".aside .navs a[href='"+path+"']").addClass("active").closest("ul").show();
         }
     }
 });

@@ -1,5 +1,7 @@
-define(["jquery","template","bootstrap"], function ($,template) {
+define(["jquery","template","util","bootstrap"], function ($,template,util) {
 
+    //设置菜单栏高亮显示
+    util.setMenu(location.pathname);
     //获取教师数据
     $.ajax({
         type: "get",
