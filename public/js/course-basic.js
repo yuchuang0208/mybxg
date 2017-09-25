@@ -11,7 +11,7 @@ define(["jquery","template","util"], function ($, template, util) {
         data: {cs_id:csId},
         dataType: "json",
         success: function (data) {
-            console.log(data);
+            //console.log(data);
             if(flag) {
                 data.result.operate="课程编辑";
             }else{
@@ -20,6 +20,7 @@ define(["jquery","template","util"], function ($, template, util) {
 
             var html = template("basicTpl",data.result);
             $("#basicInfo").html(html);
+
         }
     });
 });
