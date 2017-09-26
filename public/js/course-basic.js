@@ -1,4 +1,4 @@
-define(["jquery","template","util","ckeditor"], function ($, template, util,CKEDITOR) {
+define(["jquery","template","util","ckeditor","form"], function ($, template, util,CKEDITOR) {
     util.setMenu("/course/add");
     //获取课程id
     var csId = util.searchStr("cs_id");
@@ -48,6 +48,22 @@ define(["jquery","template","util","ckeditor"], function ($, template, util,CKED
                     { name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] }
                 ]
             });
+
+            //点击保存按钮跳转页面
+            $("#btn").on("click", function () {
+                $("#courseForm").ajaxSubmit({
+                    type: "post",
+                    url: "/api/course/update/basic",
+                    data: {cs_id:csId},
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+                        if(data.code == 200) {
+                            location.href = "/course/picture?cs_id="+data.result.cs_id;
+                        }
+                    }
+                })
+            })
         }
     });
 });

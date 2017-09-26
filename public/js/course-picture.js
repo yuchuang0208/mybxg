@@ -6,5 +6,5 @@ define(["jquery","template","util"], function ($, template, util) {
     //flag
     var flag = util.searchStr("flag");
 
-    
+
 });
