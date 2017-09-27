@@ -54,8 +54,8 @@ define(["jquery","template","util","bootstrap"], function ($,template,util) {
                         $("#modalInfo").html(html);
                         $("#teacherModal").modal();
                     }
-                })
-            })
+                });
+            });
         }
     });
 
